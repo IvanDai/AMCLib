@@ -1,0 +1,19 @@
+# Floders
+/Dataset/
+/PRESERVED/
+
+# python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pkl
+*.h5
+
+# VScode
+.vscode
+
+# matab
+*.asv
+
+# OSX
+.DS_Store
