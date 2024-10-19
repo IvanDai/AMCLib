@@ -48,8 +48,8 @@ class idx_RML2018():
 if __name__ == '__main__':
     # get path
     CURR_PATH = os.path.abspath(os.path.dirname(__file__))
-    ROOT_PATH = CURR_PATH[:CURR_PATH.find('AMC_Lib/Source/')+len('AMC_Lib/Source/')]
+    ROOT_PATH = CURR_PATH[:CURR_PATH.find('AMC_Lib/')+len('AMC_Lib/')]
     DATA_PATH = ROOT_PATH + 'Dataset/RML2018.hdf5'
-    INDX_PATH = ROOT_PATH + 'Saves/Index/'
+    INDX_PATH = ROOT_PATH + 'Source/Saves/Index/'
     # save index
     idx_RML2018(DATA_PATH).save(INDX_PATH)
