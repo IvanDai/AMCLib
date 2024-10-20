@@ -1,6 +1,8 @@
 import os
 from torch.utils.data import Dataset, DataLoader
 import h5py
+import pickle as pkl
+from PrePorcess import FilterBank32
 # from torchvision.transforms import transforms
 
 class RML2018_Dataset(Dataset):
@@ -21,4 +23,18 @@ class RML2018_Dataset(Dataset):
         return self.indices.shape[0]
 
 if __name__ == '__main__':
+    CURR_PATH = os.path.abspath(os.path.dirname(__file__))
+    ROOT_PATH = CURR_PATH[:CURR_PATH.find('AMC_Lib')+len('AMC_Lib/')]
+
+    DATA_PATH = ROOT_PATH + 'Datasets/RML2018.hdf5'
+
+    IDX_PATH  = ROOT_PATH + 'Saves/Index/RML2018_idx.pkl'
     
+    with open(IDX_PATH) as f:
+        all_indices = pkl.load(f)
+    
+    train_idx = all_indices["train"]
+
+    train_ds = RML2018_Dataset(DATA_PATH,train_idx,FilterBank32)
+
+    print(train_ds[1])

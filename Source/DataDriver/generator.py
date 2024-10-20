@@ -70,8 +70,6 @@ class gen_RML2018_FB(keras.utils.Sequence):
 
 
 
-
-
 """
 [Discription]:
     Standard generator for RML2018.
