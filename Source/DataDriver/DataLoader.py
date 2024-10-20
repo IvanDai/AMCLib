@@ -22,19 +22,18 @@ class RML2018_Dataset(Dataset):
     def __len__(self):
         return self.indices.shape[0]
 
+
+
 if __name__ == '__main__':
+    # Get PATHs
     CURR_PATH = os.path.abspath(os.path.dirname(__file__))
     ROOT_PATH = CURR_PATH[:CURR_PATH.find('AMC_Lib')+len('AMC_Lib/')]
-
     DATA_PATH = ROOT_PATH + 'Datasets/RML2018.hdf5'
-
     IDX_PATH  = ROOT_PATH + 'Saves/Index/RML2018_idx.pkl'
-    
-    with open(IDX_PATH) as f:
+    # Get indices already splited
+    with open(IDX_PATH,'rb') as f:
         all_indices = pkl.load(f)
-    
     train_idx = all_indices["train"]
-
+    # Test DataSet
     train_ds = RML2018_Dataset(DATA_PATH,train_idx,FilterBank32)
-
-    print(train_ds[1])
+    # print(train_ds[1][0].shape)
