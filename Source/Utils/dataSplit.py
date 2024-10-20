@@ -3,14 +3,14 @@ import os
 import h5py
 import pickle
 
-class idx_RML2018():
+class splitRML2018():
     """
-    A module for index generation of rml2018.
+    A module desigend for the split of rml2018 with the indices as the output.
     [Note]:
     We can use this code to save the index directly:
-    > idx_RML2018(DATA_PATH).save(INDX_PATH)
+    > splitRML2018(DATA_PATH).save(INDX_PATH)
     And can use this code to get the index variants:
-    > train_idx, val_idx, test_idx = idx_RML2018(DATA_PATH).get_index()
+    > train_idx, val_idx, test_idx = splitRML2018(DATA_PATH).get_index()
     """
     def __init__(self,DATA_PATH,split=[0.6,0.2,0.2]):
         """
@@ -49,7 +49,7 @@ if __name__ == '__main__':
     # get path
     CURR_PATH = os.path.abspath(os.path.dirname(__file__))
     ROOT_PATH = CURR_PATH[:CURR_PATH.find('AMC_Lib/')+len('AMC_Lib/')]
-    DATA_PATH = ROOT_PATH + 'Dataset/RML2018.hdf5'
+    DATA_PATH = ROOT_PATH + 'Datasets/RML2018.hdf5'
     INDX_PATH = ROOT_PATH + 'Source/Saves/Index/'
     # save index
-    idx_RML2018(DATA_PATH).save(INDX_PATH)
+    splitRML2018(DATA_PATH).save(INDX_PATH)
