@@ -1,5 +1,6 @@
+
 # Floders
-/Dataset/
+# /Dataset/
 /PRESERVED/
 
 # python
@@ -8,6 +9,7 @@ __pycache__/
 *$py.class
 *.pkl
 *.h5
+*.hdf5
 
 # VScode
 .vscode
