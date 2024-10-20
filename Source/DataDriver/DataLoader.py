@@ -21,8 +21,7 @@ class RML2018_Dataset(Dataset):
     
     def __len__(self):
         return self.indices.shape[0]
-
-
+ 
 
 if __name__ == '__main__':
     # Get PATHs
