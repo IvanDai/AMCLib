@@ -2,7 +2,7 @@ import os
 from torch.utils.data import Dataset, DataLoader
 import h5py
 import pickle as pkl
-from PrePorcess import FilterBank32
+import torch
 # from torchvision.transforms import transforms
 
 class RML2018_Dataset(Dataset):
@@ -17,10 +17,12 @@ class RML2018_Dataset(Dataset):
         label  = self.DATASET['Y'][index,:]
         if self.transform is not None:
             signal = self.transform(signal)
+        signal = torch.Tensor(signal)
+        label = int(torch.argmax(torch.Tensor(label)))
         return signal,label
     
     def __len__(self):
-        return self.indices.shape[0]
+        return len(self.indices)
  
 
 if __name__ == '__main__':
@@ -34,5 +36,6 @@ if __name__ == '__main__':
         all_indices = pkl.load(f)
     train_idx = all_indices["train"]
     # Test DataSet
+    from PrePorcess import FilterBank32
     train_ds = RML2018_Dataset(DATA_PATH,train_idx,FilterBank32)
-    # print(train_ds[1][0].shape)
+    print(train_ds[10086])
