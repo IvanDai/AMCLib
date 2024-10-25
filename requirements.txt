@@ -1,0 +1,11 @@
+torch
+numpy
+matplotlib
+h5py
+scikit-learn
+
+torchkeras
+torchmetrics
+pandas
+tqmd
+accelerate
