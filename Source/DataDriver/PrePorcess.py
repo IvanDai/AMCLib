@@ -22,15 +22,15 @@ def FilterBank(input,filter):
     input_poly = reshape(input_cplx,(n_ch,-1))
     input_poly = concatenate((vec_supply[:,0:l_fil//2], input_poly , vec_supply[:,0:(l_fil+1)//2]) ,axis=1)
     # declare variables
-    output    = zeros([n_ch,l_out,2])
+    output    = zeros([2,n_ch,l_out])
     buff_poly = zeros([n_ch,l_fil])
     buff_cplx = zeros(n_ch)
     # filtered
     for i in range(l_fil):
         buff_poly = input_poly[:,i:i+l_fil]
         buff_cplx = fft.fftshift(n_ch*fft.ifft(sum(buff_poly*filter,axis=1)))
-        output[:,i,0] = real(buff_cplx)
-        output[:,i,1] = imag(buff_cplx)
+        output[0,:,i] = real(buff_cplx)
+        output[1,:,i] = imag(buff_cplx)
     # return
     return output
 

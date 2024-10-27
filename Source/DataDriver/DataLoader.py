@@ -5,7 +5,7 @@ import pickle as pkl
 import torch
 # from torchvision.transforms import transforms
 
-class RML2018_Dataset(Dataset):
+class DS_RML2018(Dataset):
     def __init__(self, DATA_PATH, indices, transform=None):
         self.indices    = indices
         self.DATASET    = h5py.File(DATA_PATH)
@@ -37,7 +37,7 @@ if __name__ == '__main__':
     train_idx = all_indices["train"]
     # Test DataSet
     from PrePorcess import FilterBank32
-    train_ds = RML2018_Dataset(DATA_PATH,train_idx,FilterBank32)
+    train_ds = DS_RML2018(DATA_PATH,train_idx,FilterBank32)
     train_dl = DataLoader(train_ds,32)
     for data,label in train_dl:
         print(label)

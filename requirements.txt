@@ -3,10 +3,12 @@ numpy
 matplotlib
 h5py
 scikit-learn
-
+# torchkeras
 torchkeras
 pandas
 tqdm
 accelerate
 IPython
 omegaconf
+# Pandas (To save logs in .orc form)
+pyarrow
