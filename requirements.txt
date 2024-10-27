@@ -5,7 +5,8 @@ h5py
 scikit-learn
 
 torchkeras
-torchmetrics
 pandas
-tqmd
+tqdm
 accelerate
+IPython
+omegaconf

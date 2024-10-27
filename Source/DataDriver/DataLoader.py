@@ -38,4 +38,7 @@ if __name__ == '__main__':
     # Test DataSet
     from PrePorcess import FilterBank32
     train_ds = RML2018_Dataset(DATA_PATH,train_idx,FilterBank32)
-    print(train_ds[10086])
+    train_dl = DataLoader(train_ds,32)
+    for data,label in train_dl:
+        print(label)
+        break

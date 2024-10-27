@@ -19,3 +19,7 @@ __pycache__/
 
 # OSX
 .DS_Store
+
+# PyTorch checkpoints
+*.pt
+Saves/Logs/
