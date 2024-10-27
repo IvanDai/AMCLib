@@ -44,20 +44,6 @@ configs = {
     'load_log'    : True
 }
 
-# # == PATH Settings ==
-# ROOT_PATH = os.path.abspath('.')[:os.path.abspath('.').find('AMC_Lib')+len('AMC_Lib')]
-# DATA_PATH = ROOT_PATH + '/Datasets/RML2018.hdf5'
-# # == Compile Settings ==
-# # optimizer = None
-# # criterion = None
-# # metrics = None
-# lr = 5e-3
-# # == Fit Settings ==
-# epochs   = 2
-# batch_size  = 1024
-# patience = 10
-
-
 if __name__ == '__main__' :
     # =========== Prepare =================================
     # Name saved
@@ -124,3 +110,6 @@ if __name__ == '__main__' :
     else:
         log = history
     log.to_orc(SAVE_PATH_LOG)
+    
+    # del model
+    # del net
