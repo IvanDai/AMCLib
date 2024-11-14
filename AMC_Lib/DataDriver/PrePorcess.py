@@ -26,7 +26,7 @@ def FilterBank(input,filter):
     buff_poly = zeros([n_ch,l_fil])
     buff_cplx = zeros(n_ch)
     # filtered
-    for i in range(l_out):
+    for i in range(l_fil):
         buff_poly = input_poly[:,i:i+l_fil]
         buff_cplx = fft.fftshift(n_ch*fft.ifft(sum(buff_poly*filter,axis=1)))
         output[0,:,i] = real(buff_cplx)

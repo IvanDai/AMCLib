@@ -19,7 +19,6 @@ class DS_RML2018(Dataset):
             signal = self.transform(signal)
         signal = torch.Tensor(signal)
         label = int(torch.argmax(torch.Tensor(label)))
-        # index = torch.Tensor(index)
         return signal,label
     
     def __len__(self):
