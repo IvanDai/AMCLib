@@ -12,7 +12,7 @@ from DataDriver.PrePorcess import FilterBank32
 from Models.ResNet import ResNet,BasicBlock
 
 from Utils import Accuracy
-from Utils.DictMaps import cri_dict,optim_dict
+from Utils.MappingDicts import cri_dict,optim_dict
 
 # =========== Configs =================================
 configs = {
