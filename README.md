@@ -26,16 +26,22 @@ AMC_Lib is an open source library for the researchers focusing on **Automatic Mo
 
 ### * Dataset (Dataloader)
 
-- **DeepSig Series**
+- **DeepSig Series** 
   - [ ] RadioML2016.04C
   - [ ] RadioML2016.10A
   - [x] RadioML2018.01A
+  - [x] RadioML2018.01A
 - HiserMod (Still waiting)
+  - [ ] HiserMod
+
   - [ ] HiserMod
 
 - Signal Generation (Still waiting)
   - [ ] Signal moudulate
   - [ ] Interference
+
+  - [x] Signal modulator (⚠️Not uploaded)
+  - [ ]  Interference
 
 
 ### * Methods
@@ -62,7 +68,7 @@ AMC_Lib is an open source library for the researchers focusing on **Automatic Mo
   - [ ] FLOPs
   - [ ] Inference Speed
 - Efficiency
-  - [ ] Accuracy
+  - [x] Accuracy
 
 ### * Preprocessing
 
