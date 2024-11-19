@@ -29,9 +29,14 @@ AMC_Lib is an open source library for the researchers focusing on **Automatic Mo
 - **DeepSig Series**
   - [ ] RadioML2016.04C
   - [ ] RadioML2016.10A
-  - [ ] RadioML2018.01A
+  - [x] RadioML2018.01A
 - HiserMod (Still waiting)
+  - [ ] HiserMod
+
 - Signal Generation (Still waiting)
+  - [ ] Signal moudulate
+  - [ ] Interference
+
 
 ### * Methods
 
@@ -47,7 +52,7 @@ AMC_Lib is an open source library for the researchers focusing on **Automatic Mo
   - [ ] KAN
   - [ ] miniGRU, miniLSTM
 - Time series classification methods (Thanks to [TSLib](https://github.com/thuml/Time-Series-Library))
-  - [ ] 
+  - [ ] (Not yet!!)
 
 ### * Evaluation Tools
 
